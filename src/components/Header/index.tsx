@@ -1,10 +1,18 @@
-function Header() {
+interface HeaderProps {
+    setPage: (page: number) => void;
+}
+
+function Header({ setPage }: HeaderProps) {
     return(
         <header>
             <nav>
                 <ul>
-                    <li><a href="../../pages/Home">Home</a></li>
-                    <li><a href="../../pages/About">About</a></li>
+                    <li><a onClick={() => setPage(0)}>Home</a></li>
+                    <li><a onClick={() => setPage(1)}>About</a></li>
+                </ul>
+                <ul>
+                    <li><a onClick={() => setPage(2)}>Login</a></li>
+                    <li><a onClick={() => setPage(3)}>Sign Up</a></li>
                 </ul>
             </nav>
         </header>
