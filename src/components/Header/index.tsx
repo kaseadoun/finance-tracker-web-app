@@ -1,13 +1,15 @@
+// import styles from "./header.module.css";
+
 interface HeaderProps {
     setPage: (page: number) => void;
 }
 
 function Header({ setPage }: HeaderProps) {
     return(
-        <header>
+        <header className="bg-gray-800">
             <nav>
                 <ul>
-                    <li><a onClick={() => setPage(0)}>Home</a></li>
+                    <li><a onClick={() => setPage(0)} className="text-3xl font-bold underline">Home</a></li>
                     <li><a onClick={() => setPage(1)}>About</a></li>
                 </ul>
                 <ul>
