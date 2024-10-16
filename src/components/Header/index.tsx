@@ -7,7 +7,7 @@ interface HeaderProps {
 function Header({ setPage }: HeaderProps) {
     return(
         <header className="bg-gray-800">
-            <nav>
+            <nav className="mx-auto flex items-center justify-between">
                 <ul>
                     <li><a onClick={() => setPage(0)} className="text-3xl font-bold underline">Home</a></li>
                     <li><a onClick={() => setPage(1)}>About</a></li>
