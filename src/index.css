@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif, Helvetica, Arial, sans-serif;
 }
 
+#root {
+  max-width: 100vw;
+  width: 100%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,7 +38,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

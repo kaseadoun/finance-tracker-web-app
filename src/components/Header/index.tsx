@@ -3,7 +3,7 @@ import { NavigationBrand, NavigationPageSide, NavigationAuthSide } from "./Navig
 
 function Header() {
     return (
-        <header className="bg-gray-800">
+        <header className="bg-gray-800 w-100vw h-50vh">
             <nav className="mx-auto flex items-center justify-between">
                 <NavigationBrand />
                 <div className="mx-auto flex items-center justify-between">

@@ -11,7 +11,7 @@ export function NavigationBrand() {
 
 export function NavigationPageSide() {
     return (
-        <ul>
+        <ul className="flex">
             {publicRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 
@@ -26,7 +26,7 @@ export function NavigationPageSide() {
 
 export function NavigationAuthSide() {
     return (
-        <ul>
+        <ul className="flex">
             {authRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 

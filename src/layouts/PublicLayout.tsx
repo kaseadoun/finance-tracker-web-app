@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 function PublicLayout() {
     return(
-        <div>
+        <div className="w-100vw">
             <Header />
             <main>
                 <Outlet />
