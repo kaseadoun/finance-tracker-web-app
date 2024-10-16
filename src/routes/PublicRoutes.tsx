@@ -3,6 +3,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import ErrorPage from "../pages/Error";
 
 export const publicRoutes = {
     path: '/',
@@ -10,7 +11,8 @@ export const publicRoutes = {
     children: [
         { path: '/', title: "Home", element: <Home title="Home" /> },
         { path: 'about', title: "About", element: <About /> }
-    ]
+    ],
+    errorElement: <ErrorPage />
 }
 
 export const authRoutes = {
@@ -19,5 +21,6 @@ export const authRoutes = {
     children: [
         { path: 'login', title: "Login", element: <Login /> },
         { path: 'signup', title: 'Sign Up', element: <Signup />}
-    ]
+    ],
+    errorElement: <ErrorPage />
 }

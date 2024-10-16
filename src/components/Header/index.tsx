@@ -4,9 +4,9 @@ import { NavigationBrand, NavigationPageSide, NavigationAuthSide } from "./Navig
 function Header() {
     return (
         <header className="bg-gray-800 w-100vw h-50vh">
-            <nav className="mx-auto flex items-center justify-between">
+            <nav className="flex space-between">
                 <NavigationBrand />
-                <div className="mx-auto flex items-center justify-between">
+                <div className="flex items-center justify-between w-50vw">
                     <NavigationPageSide />
                     <NavigationAuthSide />
                 </div>

@@ -4,7 +4,7 @@ import NavItem from "./NavigationItem";
 export function NavigationBrand() {
     return (
         <>
-            <h2>Brand Symbol</h2>
+            <img src="../src/assets/money-icon.png"></img>
         </>
     );
 }

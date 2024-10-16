@@ -1,7 +1,9 @@
 function Home({ title }: { title: string }) {
-    return(
+    return (
         <>
-            <h1>{title}</h1>
+            <section className="h-90vh">
+                <h1>{title}</h1>
+            </section>
         </>
     );
 }
