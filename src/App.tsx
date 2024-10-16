@@ -1,10 +1,17 @@
-import MainLayout from "./layouts/MainLayout"
+import PublicLayout from "./layouts/PublicLayout"
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from 'react-router-dom';
+import { publicRoutes } from "./routes/PublicRoutes";
 
 function App() {
 
+  const router = createBrowserRouter([
+    publicRoutes
+  ])
+
   return (
     <>
-      <MainLayout />
+      <RouterProvider router={ router } />
     </>
   )
 }

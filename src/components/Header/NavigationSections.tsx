@@ -9,7 +9,9 @@ export function NavigationBrand() {
 export function NavigationPageSide() {
     return(
         <div>
-            
+            <ul>
+                
+            </ul>
         </div>
     );
 }
