@@ -1,9 +1,7 @@
-function Home() {
-    
-    
+function Home({ title }: { title: string }) {
     return(
         <>
-            <h1>Home</h1>
+            <h1>{title}</h1>
         </>
     );
 }

@@ -1,14 +1,15 @@
 // import styles from "./header.module.css";
-import NavItem from "./NavigationItem";
+import { NavigationBrand, NavigationPageSide, NavigationAuthSide } from "./NavigationSections";
 
 function Header() {
-    return(
+    return (
         <header className="bg-gray-800">
             <nav className="mx-auto flex items-center justify-between">
-                <ul>
-                    <NavItem link="/" title="Home" />
-                    <NavItem link="/about" title="About" />
-                </ul>
+                <NavigationBrand />
+                <div className="mx-auto flex items-center justify-between">
+                    <NavigationPageSide />
+                    <NavigationAuthSide />
+                </div>
             </nav>
         </header>
     );
