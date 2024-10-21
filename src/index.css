@@ -3,13 +3,19 @@
 @tailwind utilities;
 
 :root {
+  --primary-color: #D2E0FB;
+  --secondary-color: #FEF9D9;
+  --tertiary-color: #DEE5D4;
+  --fourth-color: #8EACCD;
+  --rainy-cloud-color: #162930;
+
   font-family: "Jost", sans-serif, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgb(0, 0, 0);
-  background-color: #D2E0FB;
+  color: white;
+  background-color: var(--primary-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,7 +63,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--secondary-color);
+  color: black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -82,6 +89,16 @@ button:focus-visible {
   }
 }
 
+
+/* My Styling */
 .bg-pastel-yellow {
-  background-color: #FEF9D9;
+  background-color: var(--secondary-color);
+}
+
+.bg-rainy-cloud-grey {
+  background-color: var(--rainy-cloud-color);
+}
+
+.bg-gradient-rainy-grey-to-white {
+  background-image: linear-gradient(var(--rainy-cloud-color) 86%, rgba(255, 255, 255, 0) 100%);
 }

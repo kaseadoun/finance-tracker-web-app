@@ -3,7 +3,7 @@ import NavItem from "./NavigationItem";
 
 export function NavigationBrand() {
     return (
-        <div className="w-2/5">
+        <div className="w-3/4">
             <h1 className="mx-10">RainyDay</h1>
         </div>
     );
@@ -11,7 +11,7 @@ export function NavigationBrand() {
 
 export function NavigationPageSide() {
     return (
-        <ul className="flex w-2/5">
+        <ul className="flex w-2/4 justify-around">
             {publicRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 
@@ -26,7 +26,7 @@ export function NavigationPageSide() {
 
 export function NavigationAuthSide() {
     return (
-        <ul className="flex w-2/5">
+        <ul className="flex w-2/4 justify-around">
             {authRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 
