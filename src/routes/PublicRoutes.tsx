@@ -9,7 +9,7 @@ export const publicRoutes = {
     path: '/',
     element: <PublicLayout />,
     children: [
-        { path: '/', title: "Home", element: <Home title="Home" /> },
+        { path: '/', title: "Home", element: <Home title="Welcome to RainyDay" /> },
         { path: 'about', title: "About", element: <About /> }
     ],
     errorElement: <ErrorPage />

@@ -3,15 +3,15 @@ import NavItem from "./NavigationItem";
 
 export function NavigationBrand() {
     return (
-        <>
-            <img src="../src/assets/money-icon.png"></img>
-        </>
+        <div className="w-2/5">
+            <h1 className="mx-10">RainyDay</h1>
+        </div>
     );
 }
 
 export function NavigationPageSide() {
     return (
-        <ul className="flex">
+        <ul className="flex w-2/5">
             {publicRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 
@@ -26,7 +26,7 @@ export function NavigationPageSide() {
 
 export function NavigationAuthSide() {
     return (
-        <ul className="flex">
+        <ul className="flex w-2/5">
             {authRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 

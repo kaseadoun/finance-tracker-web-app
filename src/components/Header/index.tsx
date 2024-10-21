@@ -3,15 +3,17 @@ import { NavigationBrand, NavigationPageSide, NavigationAuthSide } from "./Navig
 
 function Header() {
     return (
-        <header className="bg-gray-800 w-100vw h-50vh">
-            <nav className="flex space-between">
-                <NavigationBrand />
-                <div className="flex items-center justify-between w-50vw">
-                    <NavigationPageSide />
-                    <NavigationAuthSide />
-                </div>
-            </nav>
-        </header>
+        <div>
+            <header className="bg-pastel-yellow w-full p-3">
+                <nav className="flex space-between">
+                    <NavigationBrand />
+                    <div className="flex items-center justify-between w-1/2">
+                        <NavigationPageSide />
+                        <NavigationAuthSide />
+                    </div>
+                </nav>
+            </header>
+        </div>
     );
 }
 
