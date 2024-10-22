@@ -1,5 +1,5 @@
 // import styles from "./header.module.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavigationBrand, NavigationPageSide, NavigationAuthSide } from "./NavigationSections";
 
 function Header() {
