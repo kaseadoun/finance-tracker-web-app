@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { Expense } from "../../types/api"; 
 
-interface Expense {
-    name: string;
-    amount: number;
-    date?: Date;
-    description?: string;
+
+interface AddExpenseProp {
+    refreshExpenseList: () => void;
 }
 
-export default function ExpenseAdd() {
+
+export default function ExpenseAdd({ refreshExpenseList }: AddExpenseProp) {
     const [expense, setExpense] = useState<Expense>({
         name: "",
         amount: 0
@@ -37,6 +37,8 @@ export default function ExpenseAdd() {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+
+            refreshExpenseList();
         } catch (error) {
             console.error('A problem occurred adding or updating a record: ', error);
         } finally {
@@ -49,7 +51,7 @@ export default function ExpenseAdd() {
 
     return (
         <div className="p-10">
-            <form onSubmit={ onSubmit }>
+            <form onSubmit={ onSubmit } className="absolute">
             <input
                     className="bg-white"
                     type="text"
