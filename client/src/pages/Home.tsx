@@ -13,21 +13,7 @@ function Home({ title }: { title: string }) {
                     <Button content="Get started"/>
                 </div>
             </section>
-            <section className="h-96">
-
-            </section>
-            <section className="h-96 bg-white">
-
-            </section>
-            <section className="h-96">
-
-            </section>
-            <section className="h-96 bg-white">
-
-            </section>
-            <section className="h-96">
-
-            </section>
+            
         </>
     );
 }

@@ -4,6 +4,8 @@ import About from '../pages/About';
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import ErrorPage from "../pages/Error";
+// For now, authenticated pages will be in the public pages until all is setup
+import Dashboard from "../pages/Dashboard";
 
 export const publicRoutes = {
     path: '/',
@@ -20,7 +22,9 @@ export const authRoutes = {
     element: <PublicLayout />,
     children: [
         { path: 'login', title: "Login", element: <Login /> },
-        { path: 'signup', title: 'Sign Up', element: <Signup />}
+        { path: 'signup', title: 'Sign Up', element: <Signup />},
+        // ALL TEMPORARY PAGES
+        { path: 'dashboard', title: 'Dashboard', element: <Dashboard />}
     ],
     errorElement: <ErrorPage />
 }
