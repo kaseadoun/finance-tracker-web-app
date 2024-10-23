@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ExpenseAdd from "./expenses/ExpenseAdd";
 
 interface Expenses {
     name: string;
@@ -35,7 +36,8 @@ export default function Dashboard() {
     }
 
     return(
-        <section>
+        <section className="p-10">
+            <ExpenseAdd />
             { expenseList() }
         </section>
     );
