@@ -91,6 +91,10 @@ button:focus-visible {
 
 
 /* My Styling */
+.bg-red {
+  background-color: red;
+}
+
 .bg-pastel-yellow {
   background-color: var(--secondary-color);
 }

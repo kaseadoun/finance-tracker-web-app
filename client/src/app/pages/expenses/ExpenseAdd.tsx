@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Expense } from "../../types/api"; 
+import { Expense } from "../../../types/api"; 
 
 
 interface AddExpenseProp {

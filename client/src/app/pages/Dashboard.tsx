@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ExpenseAdd from "./expenses/ExpenseAdd";
-import { Expense } from "../types/api";
+import { Expense } from "../../types/api";
 
 export default function Dashboard() {
     const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -26,6 +26,8 @@ export default function Dashboard() {
                 <div>
                     <h4>{expense.name}</h4>
                     <p>${expense.amount}</p>
+                    <button className="bg-grey text-black">Update</button>
+                    <button className="bg-red text-white">Delete</button>
                 </div>
             );
         })

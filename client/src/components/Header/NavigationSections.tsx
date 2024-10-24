@@ -1,4 +1,4 @@
-import { publicRoutes, authRoutes } from "../../routes/PublicRoutes";
+import { publicRoutes, authRoutes } from "../../app/routes/PublicRoutes";
 import NavItem from "./NavigationItem";
 
 export function NavigationBrand() {
