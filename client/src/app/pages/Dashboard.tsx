@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import ExpenseAdd from "./expenses/ExpenseAdd";
 import { Expense } from "../../types/api";
+import ExpenseAdd from "./expenses/ExpenseAdd";
+import ExpenseItem from "./expenses/ExpenseItem";
 
 export default function Dashboard() {
     const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -20,15 +21,35 @@ export default function Dashboard() {
         getExpenses();
     }, []);
 
+    async function deleteExpense(id: string) {
+        try {
+            const response = await fetch(`http://localhost:5050/expenses/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (!response.ok) {
+                console.error("Error deleting item.");
+                return;
+            }
+
+            setExpenses(expenses.filter(expense => expense._id !== id));
+        } catch(err) {
+            console.error('Error deleting item: ', err);
+        }
+    }
+
     function expenseList() {
         return expenses.map((expense) => {
             return (
-                <div>
-                    <h4>{expense.name}</h4>
-                    <p>${expense.amount}</p>
-                    <button className="bg-grey text-black">Update</button>
-                    <button className="bg-red text-white">Delete</button>
-                </div>
+                <ExpenseItem 
+                    key={expense._id}
+                    expense={expense}
+                    deleteExpense={() => {
+                        if (expense._id) {
+                          deleteExpense(expense._id);
+                        }
+                      }}
+                />
             );
         })
     }
