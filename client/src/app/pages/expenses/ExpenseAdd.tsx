@@ -21,12 +21,12 @@ export default function ExpenseAdd({ refreshExpenseList }: AddExpenseProp) {
         }));
     }
 
-    async function onSubmit(e: any) {
+    async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const item = { ...expense };
 
         try {
-            let response = await fetch("http://localhost:5050/expenses", {
+            const response = await fetch("http://localhost:5050/expenses", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
