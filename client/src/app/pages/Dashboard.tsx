@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Expense } from "../../types/api";
-import ExpenseAdd from "./expenses/ExpenseAdd";
+import ExpenseForm from "./expenses/ExpenseForm";
 import ExpenseItem from "./expenses/ExpenseItem";
 
 export default function Dashboard() {
     const [expenses, setExpenses] = useState<Expense[]>([]);
+    const [isUpdating, setIsUpdating] = useState<boolean>(false);
+    const [expenseToUpdate, setExpenseToUpdate] = useState<Expense | null>(null);
 
     async function getExpenses() {
         const response = await fetch('http://localhost:5050/expenses/');
@@ -38,6 +40,16 @@ export default function Dashboard() {
         }
     }
 
+    function editExpense(expense: Expense) {
+        setExpenseToUpdate(expense);
+        setIsUpdating(true);
+    }
+
+    function clearEdit() {
+        setExpenseToUpdate(null);
+        setIsUpdating(false);
+    }
+
     function expenseList() {
         return expenses.map((expense) => {
             return (
@@ -49,6 +61,7 @@ export default function Dashboard() {
                           deleteExpense(expense._id);
                         }
                       }}
+                    editExpense={() => editExpense(expense)}
                 />
             );
         })
@@ -56,7 +69,12 @@ export default function Dashboard() {
 
     return (
         <section className="p-10">
-            <ExpenseAdd refreshExpenseList={getExpenses}/>
+            <ExpenseForm 
+                refreshExpenseList={getExpenses}
+                isUpdating={isUpdating}
+                expenseToUpdate={expenseToUpdate}
+                clearEdit={clearEdit}
+            />
             {expenseList()}
         </section>
     );
