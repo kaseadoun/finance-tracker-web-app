@@ -29,7 +29,7 @@ function Login() {
                     />
                     <div className="flex">
                         <button>Login</button>
-                        <button><Link to="/">Cancel</Link></button>
+                        <Link to="/"><button>Cancel</button></Link>
                     </div>
                 </form>
                 <p><Link to="/signup">Don't have an account? Sign up!</Link></p>

@@ -36,7 +36,7 @@ export default function Signup() {
                     />
                     <div className="flex">
                         <button>Sign Up</button>
-                        <button><Link to="/">Cancel</Link></button>
+                        <Link to="/"><button>Cancel</button></Link>
                     </div>
                 </form>
                 <Link to="/login">Already have an account?</Link>
