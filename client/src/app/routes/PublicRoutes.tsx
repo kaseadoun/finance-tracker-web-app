@@ -11,8 +11,17 @@ export const publicRoutes = {
     path: '/',
     element: <PublicLayout />,
     children: [
-        { path: '/', title: "Home", element: <Home title="Welcome to RainyDay" /> },
-        { path: 'about', title: "About", element: <About /> }
+        {
+            path: '/',
+            title: "Home",
+            element: <Home title="Welcome to RainyDay" />,
+            errorElement: <ErrorPage />
+        },
+        {
+            path: 'about', 
+            title: "About", 
+            element: <About />
+        }
     ],
     errorElement: <ErrorPage />
 }
@@ -22,9 +31,9 @@ export const authRoutes = {
     element: <PublicLayout />,
     children: [
         { path: 'login', title: "Login", element: <Login /> },
-        { path: 'signup', title: 'Sign Up', element: <Signup />},
+        { path: 'signup', title: 'Sign Up', element: <Signup /> },
         // ALL TEMPORARY PAGES
-        { path: 'dashboard', title: 'Dashboard', element: <Dashboard />}
+        { path: 'dashboard', title: 'Dashboard', element: <Dashboard /> }
     ],
     errorElement: <ErrorPage />
 }
