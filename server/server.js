@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import expenses from "./routes/expense.js";
-import incomes from "./routes/imcome.js";
+import incomes from "./routes/income.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
