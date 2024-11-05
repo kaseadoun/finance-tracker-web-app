@@ -1,4 +1,4 @@
-import Button from "../../components/button/Button";
+import { Link } from "react-router-dom";
 
 function Home({ title }: { title: string }) {
     return (
@@ -10,7 +10,7 @@ function Home({ title }: { title: string }) {
                 <div className="space-y-4 > * + *">
                     <h1>{title}</h1>
                     <p>Know that all of your bills are paid and you still have enough for an emergency.</p>
-                    <Button content="Get started"/>
+                    <Link to="/signup"><button>Get Started</button></Link>
                 </div>
             </section>
             
