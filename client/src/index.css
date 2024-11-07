@@ -15,7 +15,7 @@
 
   color-scheme: light dark;
   color: black;
-  background-color: var(--primary-color);
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +26,8 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand", sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "Lexend", sans-serif, Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 
 #root {
@@ -54,6 +55,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 3em;
 }
 
 button {
@@ -105,4 +110,12 @@ button:focus-visible {
 
 .bg-gradient-rainy-grey-to-white {
   background-image: linear-gradient(var(--rainy-cloud-color) 86%, rgba(255, 255, 255, 0) 100%);
+}
+
+.dark-readability {
+  color: white;
+}
+
+.navItem:hover {
+  
 }

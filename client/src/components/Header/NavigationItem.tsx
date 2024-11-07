@@ -7,7 +7,7 @@ interface NavItemProps {
 
 function NavItem({ link, title }: NavItemProps) {
     return (
-        <li>
+        <li className='navItem'>
             <Link to={link}>{ title }</Link>
         </li>
     );

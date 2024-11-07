@@ -18,18 +18,10 @@ export const publicRoutes = {
             errorElement: <ErrorPage />
         },
         {
-            path: 'about', 
-            title: "About", 
+            path: 'about',
+            title: "About",
             element: <About />
-        }
-    ],
-    errorElement: <ErrorPage />
-}
-
-export const authRoutes = {
-    path: '/',
-    element: <PublicLayout />,
-    children: [
+        },
         { path: 'login', title: "Login", element: <Login /> },
         { path: 'signup', title: 'Sign Up', element: <Signup /> },
         // ALL TEMPORARY PAGES
@@ -37,3 +29,15 @@ export const authRoutes = {
     ],
     errorElement: <ErrorPage />
 }
+
+// export const authRoutes = {
+//     path: '/',
+//     element: <PublicLayout />,
+//     children: [
+//         { path: 'login', title: "Login", element: <Login /> },
+//         { path: 'signup', title: 'Sign Up', element: <Signup /> },
+//         // ALL TEMPORARY PAGES
+//         { path: 'dashboard', title: 'Dashboard', element: <Dashboard /> }
+//     ],
+//     errorElement: <ErrorPage />
+// }
