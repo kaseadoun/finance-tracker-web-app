@@ -1,6 +1,5 @@
 import PublicLayout from "../layouts/PublicLayout";
 import Home from '../pages/Home';
-import About from '../pages/About';
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import ErrorPage from "../pages/Error";
@@ -16,11 +15,6 @@ export const publicRoutes = {
             title: "Home",
             element: <Home title="Welcome to RainyDay" />,
             errorElement: <ErrorPage />
-        },
-        {
-            path: 'about',
-            title: "About",
-            element: <About />
         },
         { path: 'login', title: "Login", element: <Login /> },
         { path: 'signup', title: 'Sign Up', element: <Signup /> },
