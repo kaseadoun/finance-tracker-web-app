@@ -9,15 +9,16 @@ export function NavigationBrand() {
     );
 }
 
-export function NavigationPageSide() {
+export function Navigation({ isLandingPage }: { isLandingPage: boolean }) {
     return (
-        <ul className="flex items-center justify-around w-1/4">
+        <ul className={`flex items-center justify-around w-1/4 mx-10`}>
             {publicRoutes.children.map(navItem => {
                 console.log(navItem);
                 return <NavItem 
                     key={navItem.path} 
                     link={navItem.path} 
                     title={navItem.title} 
+                    isLandingPage={ isLandingPage }
                 />;
             })}
         </ul>

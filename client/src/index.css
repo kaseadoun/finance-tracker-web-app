@@ -104,10 +104,6 @@ button:focus-visible {
   background-color: var(--secondary-color);
 }
 
-.bg-rainy-cloud-grey {
-  background-color: var(--rainy-cloud-color);
-}
-
 .bg-gradient-rainy-grey-to-white {
   background-image: linear-gradient(var(--rainy-cloud-color) 86%, rgba(255, 255, 255, 0) 100%);
 }
@@ -116,6 +112,22 @@ button:focus-visible {
   color: white;
 }
 
+.navItem {
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.15s;
+}
+
 .navItem:hover {
-  
+  cursor: pointer;
+  transition: 0.15s;
+  border-radius: 5px;
+}
+
+.navItem:hover .navItemChildBlack{
+  color: black;
+}
+
+.navItem:hover .navItemChildWhite{
+  color: white;
 }

@@ -1,15 +1,15 @@
 // import styles from "./header.module.css";
 import { useEffect, useState } from "react";
-import { NavigationBrand, NavigationPageSide } from "./NavigationSections";
+import { NavigationBrand, Navigation } from "./NavigationSections";
 
 function Header() {
-    const [navigationBg, setNavigationBg] = useState(false);
+    const [isLandingPage, setIsLandingPage] = useState<boolean>(true);
 
     function changeNavigationBg() {
-        if (window.scrollY >= 800) {
-            setNavigationBg(true);
+        if (window.scrollY >= 750) {
+            setIsLandingPage(false);
         } else {
-            setNavigationBg(false);
+            setIsLandingPage(true);
         }
     }
 
@@ -20,12 +20,14 @@ function Header() {
             window.removeEventListener('scroll', changeNavigationBg);
         }
     }, []);
-    //bg-pastel-yellow
+    
     return (
-        <header className={`fixed top-0 w-full p-3 filter transition-all duration-500 ${navigationBg ? 'bg-pastel-yellow text-black drop-shadow-md' : 'bg-rainy-cloud-grey text-white'}`}>
+        <header className={`fixed top-0 w-full p-3 filter transition-all duration-500 ${isLandingPage ? 'bg-rainy-cloud-grey text-white' : 'bg-pastel-yellow text-black drop-shadow-md'}`}>
             <nav className="flex space-between w-full">
                 <NavigationBrand />
-                <NavigationPageSide />
+                <Navigation
+                    isLandingPage={ isLandingPage }
+                />
             </nav>
         </header>
     );
