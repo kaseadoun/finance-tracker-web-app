@@ -12,6 +12,11 @@ export const secureRoutes = {
             title: "Dashboard",
             element: <Dashboard />,
             errorElement: <ErrorPage />
+        },
+        {
+            path: 'expense',
+            title: 'Expense',
+            element: <Expense />
         }
     ]
 
