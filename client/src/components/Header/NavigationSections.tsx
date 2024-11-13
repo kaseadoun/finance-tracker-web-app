@@ -24,18 +24,3 @@ export function Navigation({ isLandingPage }: { isLandingPage: boolean }) {
         </ul>
     );
 }
-
-// export function NavigationAuthSide() {
-//     return (
-//         <ul className="flex w-2/4 justify-around">
-//             {authRoutes.children.map(navItem => {
-//                 console.log(navItem);
-//                 return <NavItem 
-//                     key={navItem.path} 
-//                     link={navItem.path} 
-//                     title={navItem.title} 
-//                 />;
-//             })}
-//         </ul>
-//     );
-// }
