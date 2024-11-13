@@ -74,6 +74,7 @@ export default function Dashboard() {
                 isUpdating={isUpdating}
                 expenseToUpdate={expenseToUpdate}
                 clearEdit={clearEdit}
+                setIsUpdating={setIsUpdating}
             />
             {expenseList()}
         </section>

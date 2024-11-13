@@ -7,10 +7,11 @@ interface AddExpenseProp {
     isUpdating: boolean;
     expenseToUpdate: Expense | null;
     clearEdit: () => void;
+    setIsUpdating: (isUpdating: boolean) => void;
 }
 
 
-export default function ExpenseAdd({ refreshExpenseList, isUpdating, expenseToUpdate, clearEdit }: AddExpenseProp) {
+export default function ExpenseAdd({ refreshExpenseList, isUpdating, expenseToUpdate, clearEdit, setIsUpdating }: AddExpenseProp) {
     const [expense, setExpense] = useState<Expense>({
         name: "",
         amount: 0
@@ -27,6 +28,7 @@ export default function ExpenseAdd({ refreshExpenseList, isUpdating, expenseToUp
             name: "",
             amount: 0
         });
+        setIsUpdating(false);
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
